@@ -11,7 +11,7 @@ def generate_code():
 
 song = []
 bpm = 126
-SONGFILE_NAME = 'C:\\Users\\Михаил\\Google Диск\\HACK-a-TRON\\NewGuitAir\\GuitAirServer\\app\\static\\highway_to_hell.txt'
+SONGFILE_NAME = './app/static/highway_to_hell.txt'
 def load_song():
     with open(SONGFILE_NAME) as songfile:
         song = [[int(x) for x in line.split()] for line in songfile]

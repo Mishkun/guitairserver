@@ -10,8 +10,8 @@ def index():
 @app.route('/mobile', methods= ['PUT'])
 def mobile():
     ip = request.remote_addr
+    code = request.text
     try:
-        code = request.get_json(force= True)['code']
         data.codes.index(code)
     except:
         logging.info('Registration of {} failed, no such code: {}!'.format(ip, code))
