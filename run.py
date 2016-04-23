@@ -1,9 +1,8 @@
 import traceback
 try:
-    from app import app, socketio
+    from app import app
     
-    socketio.run(app, host='0.0.0.0')
-    print('like a boss')
+    app.run(host='0.0.0.0', debug= True)
     #app.run(host='0.0.0.0', port=5000)
 except:
     traceback.print_exc()
